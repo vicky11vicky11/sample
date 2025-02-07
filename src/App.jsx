@@ -48,6 +48,7 @@ const App = () => {
 		<>
 			<NavBar></NavBar>
 			<div className="container">
+				<div>
 				<div className="search-weather">
 					<h1>Welcome to SkyCast</h1>
 					<h2>Check Your city weather here 🌦🌨</h2>
@@ -60,17 +61,7 @@ const App = () => {
 					<button className="button" onClick={handleSearch}>
 						Search
 					</button>
-
-					{/* {
-      searchedWeather.main !== undefined && (
-        <div className="searched-weather">
-          <p>City: {searchedWeather.name}</p>
-          <p>Temperature: {searchedWeather.main.temp} °C</p>
-          <p>Weather: {searchedWeather.weather[0].main}</p>
-          <p>Description: {searchedWeather.weather[0].description}</p>
-        </div>
-      )
-    } */}
+ 
 
 					{searchedWeather.main === undefined ? (
 						<p className="weather-info">Not Found</p>
@@ -96,6 +87,7 @@ const App = () => {
 						<p>Description: {currentWeather.weather[0].description}</p>
 					</div>
 				)}
+				</div>
 			</div>
 		</>
 	);
